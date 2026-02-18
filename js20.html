@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decrement Operator Example</title>
+</head>
+<body>
+    <h2>Decrement Operator Demo</h2>
+    <p id="output"></p>
+
+    <script>
+        let a = 10;
+        let result = "";
+
+        // Pre-decrement
+        let b = --a; 
+        result += "After pre-decrement: a = " + a + ", b = " + b + "<br>";
+
+        // Reset value
+        a = 10;
+
+        // Post-decrement
+        let c = a--; 
+        result += "After post-decrement: a = " + a + ", c = " + c;
+
+        // Display result in the page
+        document.getElementById("output").innerHTML = result;
+    </script>
+</body>
+</html>

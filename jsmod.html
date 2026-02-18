@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+    <h2>Arithmetic Operations on Two Integers</h2>
+
+    <!-- Input fields -->
+    <label>Enter first number: </label>
+    <input type="number" id="num1"><br><br>
+
+    <label>Enter second number: </label>
+    <input type="number" id="num2"><br><br>
+
+    <!-- Button to trigger operations -->
+    <button onclick="calculate()">Calculate</button>
+
+    <!-- Result display -->
+    <h3>Results:</h3>
+    <p id="addition"></p>
+    <p id="subtraction"></p>
+    <p id="multiplication"></p>
+    <p id="division"></p>
+    <p id="modulo"></p>
+
+    <script>
+        function calculate() {
+            var a = parseInt(document.getElementById("num1").value);
+            var b = parseInt(document.getElementById("num2").value);
+
+            var add = a + b;
+            var sub = a - b;
+            var mul = a * b;
+            var div = b !== 0 ? a / b : "Undefined (division by zero)";
+            var mod = b !== 0 ? a % b : "Undefined (division by zero)";
+s
+            document.getElementById("addition").innerHTML = "Addition: " + add;
+            document.getElementById("subtraction").innerHTML = "Subtraction: " + sub;
+            document.getElementById("multiplication").innerHTML = "Multiplication: " + mul;
+            document.getElementById("division").innerHTML = "Division: " + div;
+            document.getElementById("modulo").innerHTML = "Modulo Division: " + mod;
+        }
+    </script>
+</body>
+</html>

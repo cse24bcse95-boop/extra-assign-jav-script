@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Even Number</title>
+</head>
+<body>
+    <h2>Check if a Number is Even</h2>
+    
+    <label for="num">Enter a number:</label>
+    <input type="number" id="num">
+    <button onclick="checkEven()">Check</button>
+    
+    <p id="result"></p>
+    
+    <script>
+        function checkEven() {
+            let number = document.getElementById("num").value;
+            let resultText = "";
+
+            // Simple if condition
+            if (number % 2 === 0) {
+                resultText = number + " is an Even number.";
+            } else {
+                resultText = number + " is NOT an Even number.";
+            }
+
+            document.getElementById("result").innerHTML = resultText;
+        }
+    </script>
+</body>
+</html>
+               

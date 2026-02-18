@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swap Two Numbers</title>
+</head>
+<body>
+    <h2>Swap Two Integer Numbers (Without Third Variable)</h2>
+
+    <!-- Input fields -->
+    <label>Enter first number: </label>
+    <input type="number" id="num1"><br><br>
+
+    <label>Enter second number: </label>
+    <input type="number" id="num2"><br><br>
+
+    <!-- Button -->
+    <button onclick="swapNumbers()">Swap</button>
+
+    <!-- Result -->
+    <h3>Results:</h3>
+    <p id="before"></p>
+    <p id="after"></p>
+
+    <script>
+        function swapNumbers() {
+            // Get values
+            var a = parseInt(document.getElementById("num1").value);
+            var b = parseInt(document.getElementById("num2").value);
+
+            // Show before swap
+            document.getElementById("before").innerHTML = 
+                "Before Swap: a = " + a + ", b = " + b;
+
+            // Swap without third variable (using arithmetic)
+            a = a + b;
+            b = a - b;
+            a = a - b;
+
+            // Show after swap
+            document.getElementById("after").innerHTML = 
+                "After Swap: a = " + a + ", b = " + b;
+        }
+    </script>
+</body>
+</html>
